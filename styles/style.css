@@ -1,0 +1,21 @@
+.list{
+    margin: 4px 2px;
+    align-items: center;
+    color: white;
+    font-weight: semi-bold;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+}
+.list:hover{
+    color: lightskyblue;
+}
+
+.active{
+    border-bottom: 2px double lightskyblue;
+}
+
+.breadcrumb{
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 0.37rem;
+}
