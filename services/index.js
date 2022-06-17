@@ -267,3 +267,43 @@ export const getAuthorPosts = async (id) => {
   
     return result.postsConnection.edges;
 };
+
+export const postsSearchQuery = async (id) => {
+    const query = gql `
+        query searchQuery($filter: String!) {
+            postsConnection (filter: $filter) {
+                edges {
+                    node {
+                    author {
+                        bio
+                        name
+                        id
+                        photo {
+                        url
+                        }
+                        createdBy {
+                            id
+                          }
+                    }
+                    createdAt
+                    slug
+                    title
+                    excerpt
+                    featuredImage {
+                        url
+                    }
+                    categories {
+                        name
+                        slug
+                    }
+                    }
+                }
+            }
+        }
+    `
+   
+  
+    const result = await request(graphqlAPI, query, { id });
+  
+    return result.postsConnection.edges;
+};
