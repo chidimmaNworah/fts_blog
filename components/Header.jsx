@@ -35,7 +35,7 @@ const Header = ({author}) => {
                     </Link>
                 </div>
                 <div className='md:flex items-center justify-center text-lg'>
-                    <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
+                    <ul className={isMobile ? "nav-links nav-links-mobile" : "nav-links"}
                     onClick={() => setIsMobile(false)}
                     >
                         <Link href="/">
