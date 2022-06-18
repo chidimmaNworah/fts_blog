@@ -35,7 +35,7 @@ const Header = ({author}) => {
                     </Link>
                 </div>
                 <div className='md:flex items-center justify-center text-lg'>
-                    <ul className={isMobile ? "nav-links" : "nav-links-mobile"}
+                    <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
                     onClick={() => setIsMobile(false)}
                     >
                         <Link href="/">
@@ -62,7 +62,7 @@ const Header = ({author}) => {
                 <button className='mobile-menu-icon'
                 onClick={() => setIsMobile(!isMobile)}
                 >
-                    {isMobile ? (<ion-icon name="menu-sharp"></ion-icon>) : (<b>X</b>)}
+                    {isMobile ? (<b>X</b>) : (<ion-icon name="menu-sharp"></ion-icon>)}
                 </button>
                 </div>
                 
